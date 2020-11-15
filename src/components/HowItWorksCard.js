@@ -15,19 +15,25 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(4),
     zIndex: 1,
     boxSizing: "border-box",
-    "&::before": {
-      content: '""',
-      zIndex: 0,
-      boxSizing: "inherit",
-      position: "absolute",
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      borderRadius: "100%",
-      background: "#2070ff",
-      opacity: 0.1,
-    },
+    // "&::before": {
+    //   content: '""',
+    //   zIndex: 0,
+    //   boxSizing: "inherit",
+    //   position: "absolute",
+    //   top: 0,
+    //   left: 0,
+    //   right: 0,
+    //   bottom: 0,
+    //   borderRadius: "100%",
+    //   background: "#2070ff",
+    //   opacity: 0.1,
+    // },
+  },
+  card: {
+    display: "flex",
+    justifyContent: "space-between",
+    flexDirection: "column",
+    borderRadius: 12,
   },
 }));
 
@@ -35,13 +41,7 @@ export default function HowItWorksCard(props) {
   const classes = useStyles();
   const step = props.step;
   return (
-    <Card
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        flexDirection: "column",
-      }}
-    >
+    <Card className={classes.card}>
       <CardContent>
         <Typography className={classes.number} variant="h2">
           {step.num}

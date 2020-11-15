@@ -1,4 +1,4 @@
-import { Container, Grid, makeStyles } from "@material-ui/core";
+import { Container, Grid, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import HowItWorksCard from "../components/HowItWorksCard";
 // import SmartContractCard from "../components/SmartContractCard";
@@ -38,11 +38,12 @@ const steps = [
 const useStyles = makeStyles((theme) => ({
   container: {
     flexGrow: 1,
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(6),
   },
   containerGrid: {
     flexGrow: 1,
   },
-
   containerDiv: {
     flexGrow: 1,
     backgroundColor: "#B0B0B0",
@@ -52,8 +53,16 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     flexGrow: 1,
   },
+  sectionTitle: {
+    marginBottom: theme.spacing(2),
+  },
+  demo: {
+    marginTop: theme.spacing(6),
+    flexGrow: 1,
+    textAlign: 'center',
+  },
   step: {
-    height: "100%",
+    // height: "100%",
   },
 }));
 
@@ -62,6 +71,9 @@ export default function CardsSection() {
   return (
     <div className={classes.containerDiv}>
       <Container className={classes.container}>
+        <Typography variant="h4" className={classes.sectionTitle}>
+          How it works:
+        </Typography>
         <Grid
           container
           spacing={2}
@@ -74,6 +86,9 @@ export default function CardsSection() {
             </Grid>
           ))}
         </Grid>
+        <Typography variant="h4" className={classes.demo}>
+          Demo coming soon...
+        </Typography>
       </Container>
     </div>
   );

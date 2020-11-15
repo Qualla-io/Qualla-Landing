@@ -7,10 +7,10 @@ import {
 } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
-
 //components
 import Header from "./containers/Header";
-import CardsSection from "./containers/HowItWorks";
+import HowItWorks from "./containers/HowItWorks";
+import Details from "./containers/Detais"
 
 const font = "'Rubik', sans-serif";
 
@@ -45,7 +45,8 @@ function App() {
       <CssBaseline />
       <div className="App">
         <Header />
-        <CardsSection />
+        <HowItWorks />
+        <Details />
       </div>
     </ThemeProvider>
   );
