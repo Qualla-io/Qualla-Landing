@@ -1,9 +1,8 @@
 import React from "react";
 
-
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import { Grid } from "@material-ui/core";
+import { Grid, Link } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   topbar: {
@@ -12,8 +11,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(6),
     justifyContent: "bottom",
   },
-  title: {
-  },
+  title: {},
   grow: {
     display: "flex",
     direction: "row",
@@ -30,7 +28,7 @@ export default function Topbar() {
   return (
     <div className={classes.topbar}>
       <Typography className={classes.title} variant="h4">
-        Qualla
+        <b>Qualla</b>
       </Typography>
       <div className={classes.grow}>
         <Grid
@@ -43,7 +41,9 @@ export default function Topbar() {
             Try the demo
           </Grid>
           <Grid item component={Typography} variant="h6">
-            Get creative freedom
+            <Link href="" color="inherit">
+              Get creative freedom
+            </Link>
           </Grid>
         </Grid>
       </div>

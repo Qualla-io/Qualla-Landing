@@ -1,6 +1,14 @@
-import { Container, Grid, makeStyles, Typography } from "@material-ui/core";
+import {
+  Button,
+  Container,
+  Grid,
+  makeStyles,
+  Tooltip,
+  Typography,
+} from "@material-ui/core";
 import React from "react";
 import HowItWorksCard from "../components/HowItWorksCard";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 // import SmartContractCard from "../components/SmartContractCard";
 
 const steps = [
@@ -8,7 +16,7 @@ const steps = [
     num: 1,
     title: "Launch",
     description: `
-    You subscriptions are powered by an Ethereum smart contract that you own. 
+    Subscriptions on Qualla are powered by an Ethereum smart contract that you own. 
     Choose the subscriptions tiers you want to offer and the perks to go with them. 
     Invite your audience once you go live.`,
   },
@@ -18,7 +26,7 @@ const steps = [
     description: `
     Let those creative juices flow! Deliver the content that your fans love your for and 
     Qualla will handle the rest. We take the complexity out of accepting cryptocurrency 
-    payments, allowing you to be free to release your creative spirit.`,
+    payments, allowing you the freedom to release your creative spirit.`,
   },
   {
     num: 3,
@@ -56,13 +64,23 @@ const useStyles = makeStyles((theme) => ({
   sectionTitle: {
     marginBottom: theme.spacing(2),
   },
+  demoContainer: {
+    flexGrow: 1,
+    textAlign: "center",
+  },
   demo: {
     marginTop: theme.spacing(6),
     flexGrow: 1,
-    textAlign: 'center',
+    textAlign: "center",
+    borderWidth: 5,
+    borderRadius: 10,
+    elevation: 5,
   },
   step: {
     // height: "100%",
+  },
+  demoText: {
+    marginRight: theme.spacing(2),
   },
 }));
 
@@ -86,9 +104,21 @@ export default function CardsSection() {
             </Grid>
           ))}
         </Grid>
-        <Typography variant="h4" className={classes.demo}>
-          Demo coming soon...
-        </Typography>
+        <div className={classes.demoContainer}>
+          <Tooltip title="Coming Soon..." arrow>
+            <Button
+              variant="contained"
+              color="primary"
+              disableRipple
+              className={classes.demo}
+            >
+              <Typography variant="h5" className={classes.demoText}>
+                Try the Demo!
+              </Typography>
+              <ArrowForwardIosIcon />
+            </Button>
+          </Tooltip>
+        </div>
       </Container>
     </div>
   );
