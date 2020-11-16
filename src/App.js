@@ -10,7 +10,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 //components
 import Header from "./containers/Header";
 import HowItWorks from "./containers/HowItWorks";
-import Details from "./containers/Detais";
+import Details from "./containers/Details";
 import Timeline from "./components/Timeline";
 import Footer from "./containers/Footer";
 
