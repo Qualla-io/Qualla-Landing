@@ -2,7 +2,7 @@ import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Link } from "@material-ui/core";
+import { Grid, Link, Tooltip } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   topbar: {
@@ -38,7 +38,11 @@ export default function Topbar() {
           alignItems="flex-end"
         >
           <Grid item component={Typography} variant="h6">
-            Try the demo
+            <Tooltip title="Coming Soon..." arrow>
+              <Link  color="inherit">
+                Try the demo
+              </Link>
+            </Tooltip>
           </Grid>
           <Grid item component={Typography} variant="h6">
             <Link href="" color="inherit">

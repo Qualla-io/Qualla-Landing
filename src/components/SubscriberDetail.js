@@ -4,6 +4,7 @@ import {
   Container,
   Grid,
   makeStyles,
+  Tooltip,
   Typography,
 } from "@material-ui/core";
 import useStyles from "./detailStyles";
@@ -13,6 +14,8 @@ import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 const _useStyles = makeStyles((theme) => ({
   div: {
     backgroundColor: "#B0B0B0",
+    marginTop: theme.spacing(4),
+    marginBottom: theme.spacing(4),
   },
 }));
 
@@ -33,7 +36,7 @@ export default function SubscriberDetail() {
           </Grid>
           <Grid item xs={12} sm={7} className={classes.content}>
             <Typography variant="h3" className={classes.title}>
-              <b>Complexity Gone</b>
+              <b>Crypto made easy</b>
             </Typography>
             <Typography className={classes.paragraph}>
               Decentralized applications have historically been complex and hard
@@ -46,12 +49,14 @@ export default function SubscriberDetail() {
               Safe, simple, secure!
             </Typography>
             <div className={classes.button}>
-              <Button variant="contained">
-                <Typography variant="subtitle1" className={classes.buttonTxt}>
-                  <b>Try the demo!</b>
-                </Typography>
-                <ArrowForwardIosIcon className={classes.buttonIcon} />
-              </Button>
+              <Tooltip title="Coming Soon..." arrow>
+                <Button variant="contained" disableRipple>
+                  <Typography variant="subtitle1" className={classes.buttonTxt}>
+                    <b>Try the demo!</b>
+                  </Typography>
+                  <ArrowForwardIosIcon className={classes.buttonIcon} />
+                </Button>
+              </Tooltip>
             </div>
           </Grid>
         </Grid>

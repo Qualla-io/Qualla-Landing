@@ -4,16 +4,26 @@ import {
   Container,
   Grid,
   makeStyles,
+  Tooltip,
   Typography,
 } from "@material-ui/core";
 import { ReactComponent as SmartContractLogo } from "../images/SmartContract.svg";
 import useStyles from "./detailStyles";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
+const _useStyles = makeStyles((theme) => ({
+  div: {
+    // backgroundColor: "#B0B0B0",
+    marginTop: theme.spacing(4),
+    marginBottom: theme.spacing(4),
+  },
+}));
+
 export default function ContractDetail() {
+  const _classes = _useStyles();
   const classes = useStyles();
   return (
-    <div>
+    <div className={_classes.div}>
       <Container>
         <Grid
           container
@@ -34,12 +44,14 @@ export default function ContractDetail() {
               worry of censorship or deplatforming.
             </Typography>
             <div className={classes.button}>
-              <Button variant="contained">
-                <Typography variant="subtitle1" className={classes.buttonTxt}>
-                  <b>Learn more about Smart Contracts</b>
-                </Typography>
-                <ArrowForwardIosIcon className={classes.buttonIcon}/>
-              </Button>
+              <Tooltip title="Coming soon..." arrow>
+                <Button variant="contained">
+                  <Typography variant="subtitle1" className={classes.buttonTxt}>
+                    <b>Learn more about Smart Contracts</b>
+                  </Typography>
+                  <ArrowForwardIosIcon className={classes.buttonIcon} />
+                </Button>
+              </Tooltip>
             </div>
           </Grid>
           <Grid item xs={12} sm={5} className={classes.mediaContainer}>
