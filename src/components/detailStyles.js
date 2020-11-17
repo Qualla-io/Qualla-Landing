@@ -35,6 +35,10 @@ const useStyles = makeStyles((theme) => ({
     height: "20px",
     width: "20px"
   },
+  btn: {
+    background: `linear-gradient(275deg, #F16F55, #F05F42)`,
+    color: "#FFF"
+  },
 }));
 
 export default useStyles;

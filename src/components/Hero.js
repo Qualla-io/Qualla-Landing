@@ -1,7 +1,7 @@
 import { Typography, makeStyles, Grid, Button } from "@material-ui/core";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import React from "react";
-import CustomButton from "./CustomButton";
+// import CustomButton from "./CustomButton";
 
 const useStyles = makeStyles((theme) => ({
   headline: {

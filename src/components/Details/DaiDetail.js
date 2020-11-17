@@ -1,6 +1,5 @@
 import {
   Button,
-  Container,
   Grid,
   Tooltip,
   makeStyles,
@@ -47,9 +46,14 @@ export default function DaiDetail() {
             </Typography>
             <div className={classes.button}>
               <Tooltip title="Coming Soon..." arrow>
-                <Button variant="contained" color="secondary" disableRipple>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  disableRipple
+                  className={classes.btn}
+                >
                   <Typography variant="h6" className={classes.buttonTxt}>
-                   Learn more about Dai
+                    Learn more about Dai
                   </Typography>
                   <ArrowForwardIosIcon className={classes.buttonIcon} />
                 </Button>

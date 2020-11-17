@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Button,
-  Container,
   Grid,
   makeStyles,
   Tooltip,
@@ -14,7 +13,7 @@ import CustomContainer from "../../containers/CustomContainer";
 
 const _useStyles = makeStyles((theme) => ({
   div: {
-    backgroundColor: "#C2FFF2",
+    background: `linear-gradient(225deg, #C2FFF2, #EBFFFB)`,
     marginTop: theme.spacing(4),
     marginBottom: theme.spacing(4),
   },
@@ -51,7 +50,7 @@ export default function SubscriberDetail() {
             </Typography>
             <div className={classes.button}>
               <Tooltip title="Coming Soon..." arrow>
-                <Button variant="contained" color="secondary" disableRipple>
+                <Button variant="contained" color="secondary" disableRipple className={classes.btn}>
                   <Typography variant="h6" className={classes.buttonTxt}>
                     Try the demo!
                   </Typography>

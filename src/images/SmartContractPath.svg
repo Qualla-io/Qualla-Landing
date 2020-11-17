@@ -2,15 +2,15 @@
 <!-- Generator: Gravit.io -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 1100 1200" >
 <g id="Contract">
-	<path d=" M 118.977 214.778 L 118.977 985.778 C 118.977 991.297 123.458 995.778 128.977 995.778 L 723.977 995.778 C 729.496 995.778 733.977 991.297 733.977 985.778 L 733.977 415.778 C 733.977 410.259 730.77 402.649 726.82 398.794 L 535.134 211.762 C 531.184 207.907 523.496 204.778 517.977 204.778 L 128.977 204.778 C 123.458 204.778 118.977 209.259 118.977 214.778 Z " id="Path" fill="rgb(255,255,255)" Stroke-width="15" stroke="rgb(85,122,181)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="3"/>
-	<path d=" M 528.977 204.778 L 528.977 395.778 C 528.977 401.297 533.458 405.778 538.977 405.778 L 733.977 405.778" id="Path" fill="none" Stroke-width="15" stroke="rgb(85,122,181)" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="3"/>
+	<path d=" M 118.977 214.778 L 118.977 985.778 C 118.977 991.297 123.458 995.778 128.977 995.778 L 723.977 995.778 C 729.496 995.778 733.977 991.297 733.977 985.778 L 733.977 415.778 C 733.977 410.259 730.77 402.649 726.82 398.794 L 535.134 211.762 C 531.184 207.907 523.496 204.778 517.977 204.778 L 128.977 204.778 C 123.458 204.778 118.977 209.259 118.977 214.778 Z " id="Path" fill="rgb(255,255,255)" Stroke-width="15" stroke="rgb(62,124,177)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="3"/>
+	<path d=" M 528.977 204.778 L 528.977 395.778 C 528.977 401.297 533.458 405.778 538.977 405.778 L 733.977 405.778" id="Path" fill="none" Stroke-width="15" stroke="rgb(62,124,177)" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="3"/>
 	<g id="Lines">
-		<line x1="203.977" y1="396.778" x2="440.034" y2="396.778" id="Path" Stroke-width="15" stroke="rgb(85,122,181)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
-		<line x1="203.977" y1="488.578" x2="619.263" y2="488.578" id="Path" Stroke-width="15" stroke="rgb(85,122,181)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
-		<line x1="203.977" y1="580.378" x2="619.263" y2="580.378" id="Path" Stroke-width="15" stroke="rgb(85,122,181)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
-		<line x1="203.977" y1="855.778" x2="619.263" y2="855.778" id="Path" Stroke-width="15" stroke="rgb(85,122,181)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
-		<line x1="203.977" y1="763.978" x2="619.263" y2="763.978" id="Path" Stroke-width="15" stroke="rgb(85,122,181)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
-		<line x1="203.977" y1="672.178" x2="619.263" y2="672.178" id="Path" Stroke-width="15" stroke="rgb(85,122,181)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+		<line x1="203.977" y1="396.778" x2="440.034" y2="396.778" id="Path" Stroke-width="15" stroke="rgb(62,124,177)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+		<line x1="203.977" y1="488.578" x2="619.263" y2="488.578" id="Path" Stroke-width="15" stroke="rgb(62,124,177)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+		<line x1="203.977" y1="580.378" x2="619.263" y2="580.378" id="Path" Stroke-width="15" stroke="rgb(62,124,177)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+		<line x1="203.977" y1="855.778" x2="619.263" y2="855.778" id="Path" Stroke-width="15" stroke="rgb(62,124,177)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+		<line x1="203.977" y1="763.978" x2="619.263" y2="763.978" id="Path" Stroke-width="15" stroke="rgb(62,124,177)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+		<line x1="203.977" y1="672.178" x2="619.263" y2="672.178" id="Path" Stroke-width="15" stroke="rgb(62,124,177)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
 	</g>
 </g>
 <g id="gear">

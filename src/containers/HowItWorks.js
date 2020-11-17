@@ -1,6 +1,5 @@
 import {
   Button,
-  Container,
   Grid,
   makeStyles,
   Tooltip,
@@ -55,7 +54,8 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(6),
     flexGrow: 1,
-    backgroundColor: "#C2FFF2",
+    background: `linear-gradient(45deg, #C2FFF2, #EBFFFB)`,
+    // backgroundColor: "#C2FFF2",
     alignContent: "center",
   },
   steps: {

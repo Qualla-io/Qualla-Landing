@@ -1,4 +1,4 @@
-import { Container, makeStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import React from "react";
 import Hero from "../components/Hero";
 import Topbar from "../components/Topbar";

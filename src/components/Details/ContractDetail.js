@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Button,
-  Container,
   Grid,
   makeStyles,
   Tooltip,
@@ -46,7 +45,12 @@ export default function ContractDetail() {
             </Typography>
             <div className={classes.button}>
               <Tooltip title="Coming soon..." arrow>
-                <Button variant="contained" color="secondary">
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  disableRipple
+                  className={classes.btn}
+                >
                   <Typography variant="h6" className={classes.buttonTxt}>
                     Learn more about Smart Contracts
                   </Typography>
