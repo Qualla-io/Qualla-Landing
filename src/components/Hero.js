@@ -49,7 +49,7 @@ export default function Hero() {
         who support them.
       </Grid>
       <Button variant="contained" color="secondary" className={classes.callBtn}>
-        <Typography variant="h4" className={classes.btnText} color="inherit">
+        <Typography variant="h5" className={classes.btnText} color="inherit">
           Get Creative Freedom
         </Typography>{" "}
         <ArrowForwardIosIcon />

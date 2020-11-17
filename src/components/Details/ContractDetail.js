@@ -10,6 +10,7 @@ import { ReactComponent as SmartContractLogo } from "../../images/SmartContractP
 import useStyles from "../detailStyles";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import CustomContainer from "../../containers/CustomContainer";
+import { useSnackbar } from "notistack";
 
 const _useStyles = makeStyles((theme) => ({
   div: {
@@ -22,6 +23,11 @@ const _useStyles = makeStyles((theme) => ({
 export default function ContractDetail() {
   const _classes = _useStyles();
   const classes = useStyles();
+  const { enqueueSnackbar } = useSnackbar();
+
+  const handleClick = () => {
+    enqueueSnackbar("Coming Soon...");
+  };
   return (
     <div className={_classes.div}>
       <CustomContainer>
@@ -33,7 +39,7 @@ export default function ContractDetail() {
         >
           <Grid item xs={12} sm={7} className={classes.content}>
             <Typography variant="h3" className={classes.title}>
-              <b>Unstopable creativity</b>
+              <b>Unstoppable creativity</b>
             </Typography>
             <Typography className={classes.paragraph}>
               When you create a subscrition through Qualla, we launch an
@@ -50,9 +56,10 @@ export default function ContractDetail() {
                   color="secondary"
                   disableRipple
                   className={classes.btn}
+                  onClick={handleClick}
                 >
                   <Typography variant="h6" className={classes.buttonTxt}>
-                    Learn more about Smart Contracts
+                    Smart Contracts 101
                   </Typography>
                   <ArrowForwardIosIcon className={classes.buttonIcon} />
                 </Button>

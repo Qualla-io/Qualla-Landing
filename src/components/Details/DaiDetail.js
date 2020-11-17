@@ -7,6 +7,7 @@ import {
 } from "@material-ui/core";
 import React from "react";
 import { ReactComponent as DaiLogo } from "../../images/daiLogo.svg";
+import { useSnackbar } from "notistack";
 
 import useStyles from "../detailStyles";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
@@ -23,6 +24,10 @@ const _useStyles = makeStyles((theme) => ({
 export default function DaiDetail() {
   const classes = useStyles();
   const _classes = _useStyles();
+  const { enqueueSnackbar } = useSnackbar();
+  const handleClick = () => {
+    enqueueSnackbar("Coming Soon...");
+  };
   return (
     <div className={_classes.div}>
       <CustomContainer>
@@ -51,9 +56,10 @@ export default function DaiDetail() {
                   color="secondary"
                   disableRipple
                   className={classes.btn}
+                  onClick={handleClick}
                 >
                   <Typography variant="h6" className={classes.buttonTxt}>
-                    Learn more about Dai
+                   Learn about Dai
                   </Typography>
                   <ArrowForwardIosIcon className={classes.buttonIcon} />
                 </Button>

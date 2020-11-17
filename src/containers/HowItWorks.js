@@ -9,6 +9,7 @@ import React from "react";
 import HowItWorksCard from "../components/HowItWorksCard";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import CustomContainer from "./CustomContainer";
+import { useSnackbar } from "notistack";
 // import SmartContractCard from "../components/SmartContractCard";
 
 const steps = [
@@ -16,7 +17,7 @@ const steps = [
     num: 1,
     title: "Launch",
     description: `
-    Subscriptions on Qualla are powered by an Ethereum smart contract that you own. 
+    Subscriptions on Qualla are powered by an Ethereum smart contract that's owned by the creator. 
     Choose the subscriptions tiers you want to offer and the perks to go with them. 
     Invite your audience once you go live.`,
   },
@@ -32,7 +33,7 @@ const steps = [
     num: 3,
     title: "Collect",
     description: `
-    Your subscription revenue goes straight from your fans wallet to the smart contract you own.
+    Your subscription revenue goes straight from your fan's wallets to the smart contract you own.
     Transfer your balance at any time to your personal wallet or to an exchange and convert to the fiat 
     currency of your choice. Qualla takes a small percentage when you withdraw.`,
   },
@@ -87,6 +88,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CardsSection() {
   const classes = useStyles();
+  const { enqueueSnackbar } = useSnackbar();
+
+  const handleClick = () => {
+    enqueueSnackbar("Coming Soon...");
+  };
   return (
     <div className={classes.containerDiv}>
       <CustomContainer className={classes.container}>
@@ -112,6 +118,7 @@ export default function CardsSection() {
               color="secondary"
               disableRipple
               className={classes.demo}
+              onClick={handleClick}
             >
               <Typography variant="h5" className={classes.demoText}>
                 Try the Demo!

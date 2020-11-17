@@ -3,6 +3,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import { Grid, Link, Tooltip, Hidden } from "@material-ui/core";
+import { useSnackbar } from "notistack";
+// import CustomTooltip from "./Details/CustomTooltip";
 
 const useStyles = makeStyles((theme) => ({
   topbar: {
@@ -25,6 +27,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Topbar() {
   const classes = useStyles();
+  const { enqueueSnackbar } = useSnackbar();
+
+  const handleClick = () => {
+    enqueueSnackbar("Coming Soon...")
+  }
+
   return (
     <div className={classes.topbar}>
       <Typography className={classes.title} variant="h4">
@@ -40,7 +48,7 @@ export default function Topbar() {
           >
             <Grid item component={Typography} variant="h6">
               <Tooltip title="Coming Soon..." arrow>
-                <Link color="inherit">Try the demo</Link>
+                <Link color="inherit" onClick={handleClick}>Try the demo</Link>
               </Tooltip>
             </Grid>
             <Grid item component={Typography} variant="h6">

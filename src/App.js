@@ -6,6 +6,7 @@ import {
   ThemeProvider,
 } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import { SnackbarProvider } from "notistack";
 
 //components
 import Header from "./containers/Header";
@@ -13,7 +14,6 @@ import HowItWorks from "./containers/HowItWorks";
 import Details from "./containers/Details";
 import Timeline from "./components/Timeline";
 import Footer from "./containers/Footer";
-import { Hidden } from "@material-ui/core";
 import QuallaLogo from "./components/QuallaLogo";
 
 const font = "'Rubik', sans-serif";
@@ -25,7 +25,7 @@ let theme = createMuiTheme({
     },
     secondary: {
       main: "#F16F55",
-      contrastText: "#FFF"
+      contrastText: "#FFF",
     },
   },
   typography: {
@@ -59,14 +59,22 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className="App">
-        <QuallaLogo />
-        <Header />
-        <HowItWorks />
-        <Details />
-        <Hidden xsDown>
+        <SnackbarProvider
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "center",
+          }}
+          variant="info"
+          autoHideDuration={2000}
+          // hideIconVariant
+        >
+          <QuallaLogo />
+          <Header />
+          <HowItWorks />
+          <Details />
           <Timeline />
-        </Hidden>
-        <Footer />
+          <Footer />
+        </SnackbarProvider>
       </div>
     </ThemeProvider>
   );

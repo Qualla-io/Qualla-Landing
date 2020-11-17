@@ -10,6 +10,7 @@ import useStyles from "../detailStyles";
 import { ReactComponent as DaiLogo } from "../../images/daiLogo.svg";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import CustomContainer from "../../containers/CustomContainer";
+import { useSnackbar } from "notistack";
 
 const _useStyles = makeStyles((theme) => ({
   div: {
@@ -22,6 +23,11 @@ const _useStyles = makeStyles((theme) => ({
 export default function SubscriberDetail() {
   const classes = useStyles();
   const _classes = _useStyles();
+  const { enqueueSnackbar } = useSnackbar();
+
+  const handleClick = () => {
+    enqueueSnackbar("Coming Soon...");
+  };
   return (
     <div className={_classes.div}>
       <CustomContainer>
@@ -43,19 +49,24 @@ export default function SubscriberDetail() {
               to use. Qualla puts the user experience in the front row seat. All
               you need to get started is an Ethereum wallet to sign
               transactions. You can get one for free by downloading the popular
-              browser extension Metamask, or connect an exsisting wallet. We
-              handle all the complexities of transactions so you don't have to.
-              Just sign a message for each action you take to prove its you.
+              browser extension Metamask, or by connecting an exsisting wallet.
+              We handle all the complexities of transactions so you don't have
+              to. Just sign a message for each action you take to prove its you.
               Safe, simple, secure!
             </Typography>
             <div className={classes.button}>
               <Tooltip title="Coming Soon..." arrow>
-                <Button variant="contained" color="secondary" disableRipple className={classes.btn}>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  disableRipple
+                  className={classes.btn}
+                  onClick={handleClick}
+                >
                   <Typography variant="h6" className={classes.buttonTxt}>
                     Try the demo!
                   </Typography>
-                  <ArrowForwardIosIcon
-                  />
+                  <ArrowForwardIosIcon />
                 </Button>
               </Tooltip>
             </div>

@@ -10,6 +10,13 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 1,
     height: "50px",
   },
+  logoSm: {
+    position: "fixed",
+    top: 50,
+    left: theme.spacing(2),
+    zIndex: 1,
+    height: "25px",
+  },
 }));
 
 export default function QuallaLogo() {
@@ -18,6 +25,9 @@ export default function QuallaLogo() {
     <>
       <Hidden smDown>
         <QuallaLogoIcon className={classes.logo} />
+      </Hidden>
+      <Hidden mdUp>
+        <QuallaLogoIcon className={classes.logoSm} />
       </Hidden>
     </>
   );
