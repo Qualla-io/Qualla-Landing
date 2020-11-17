@@ -6,26 +6,32 @@ import TimelineConnector from "@material-ui/lab/TimelineConnector";
 import TimelineContent from "@material-ui/lab/TimelineContent";
 import TimelineDot from "@material-ui/lab/TimelineDot";
 
-import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
-import PaletteIcon from "@material-ui/icons/Palette";
-import PeopleIcon from "@material-ui/icons/People";
+import PeopleAltOutlinedIcon from "@material-ui/icons/PeopleAltOutlined";
+import PaymentOutlinedIcon from "@material-ui/icons/PaymentOutlined";
+
+import { ReactComponent as PaintingIcon } from "../images/painting.svg";
 
 import React from "react";
 
 const useStyles = makeStyles((theme) => ({
   container: {
     marginBottom: theme.spacing(6),
-    marginTop: theme.spacing(6)
+    marginTop: theme.spacing(6),
   },
   paper: {
     padding: theme.spacing(2),
   },
-  heading:{
-      textAlign: "center"
+  heading: {
+    textAlign: "center",
   },
   icon: {
     width: "50px",
     height: "50px",
+  },
+  dot: {
+    padding: 10,
+    borderColor: theme.palette.secondary.main,
+    borderWidth: 2,
   },
 }));
 
@@ -33,12 +39,14 @@ export default function CustomTimeline() {
   const classes = useStyles();
   return (
     <Container className={classes.container}>
-      <Typography className={classes.heading} variant="h3" >Road map</Typography>
+      <Typography className={classes.heading} variant="h3">
+        Road map
+      </Typography>
       <Timeline align="alternate">
         <TimelineItem>
           <TimelineSeparator>
-            <TimelineDot variant="outlined">
-              <MonetizationOnIcon color="primary" className={classes.icon} />
+            <TimelineDot variant="outlined" className={classes.dot}>
+              <PaymentOutlinedIcon className={classes.icon} />
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
@@ -56,8 +64,8 @@ export default function CustomTimeline() {
         </TimelineItem>
         <TimelineItem>
           <TimelineSeparator>
-            <TimelineDot variant="outlined">
-              <PaletteIcon color="primary" className={classes.icon} />
+            <TimelineDot variant="outlined" className={classes.dot}>
+              <PaintingIcon className={classes.icon} />
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
@@ -77,12 +85,11 @@ export default function CustomTimeline() {
         </TimelineItem>
         <TimelineItem>
           <TimelineSeparator>
-            <TimelineDot variant="outlined">
-              <PeopleIcon color="primary" className={classes.icon} />
+            <TimelineDot variant="outlined" className={classes.dot}>
+              <PeopleAltOutlinedIcon className={classes.icon} />
             </TimelineDot>
           </TimelineSeparator>
           <TimelineContent>
-            {" "}
             <Paper elevation={3} className={classes.paper}>
               <Typography variant="h6">Progressive Decentralization</Typography>
               <Typography>

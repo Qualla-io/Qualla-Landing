@@ -9,6 +9,7 @@ import {
 import React from "react";
 import HowItWorksCard from "../components/HowItWorksCard";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import CustomContainer from "./CustomContainer";
 // import SmartContractCard from "../components/SmartContractCard";
 
 const steps = [
@@ -46,15 +47,15 @@ const steps = [
 const useStyles = makeStyles((theme) => ({
   container: {
     flexGrow: 1,
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(6),
   },
   containerGrid: {
     flexGrow: 1,
   },
   containerDiv: {
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(6),
     flexGrow: 1,
-    backgroundColor: "#B0B0B0",
+    backgroundColor: "#C2FFF2",
     alignContent: "center",
   },
   steps: {
@@ -88,7 +89,7 @@ export default function CardsSection() {
   const classes = useStyles();
   return (
     <div className={classes.containerDiv}>
-      <Container className={classes.container}>
+      <CustomContainer className={classes.container}>
         <Typography variant="h4" className={classes.sectionTitle}>
           How it works:
         </Typography>
@@ -108,7 +109,7 @@ export default function CardsSection() {
           <Tooltip title="Coming Soon..." arrow>
             <Button
               variant="contained"
-              color="primary"
+              color="secondary"
               disableRipple
               className={classes.demo}
             >
@@ -119,7 +120,7 @@ export default function CardsSection() {
             </Button>
           </Tooltip>
         </div>
-      </Container>
+      </CustomContainer>
     </div>
   );
 }

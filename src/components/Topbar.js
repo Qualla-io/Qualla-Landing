@@ -2,7 +2,7 @@ import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Link, Tooltip } from "@material-ui/core";
+import { Grid, Link, Tooltip, Hidden } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   topbar: {
@@ -31,25 +31,25 @@ export default function Topbar() {
         <b>Qualla</b>
       </Typography>
       <div className={classes.grow}>
-        <Grid
-          container
-          spacing={4}
-          className={classes.content}
-          alignItems="flex-end"
-        >
-          <Grid item component={Typography} variant="h6">
-            <Tooltip title="Coming Soon..." arrow>
-              <Link  color="inherit">
-                Try the demo
+        <Hidden smDown>
+          <Grid
+            container
+            spacing={4}
+            className={classes.content}
+            alignItems="flex-end"
+          >
+            <Grid item component={Typography} variant="h6">
+              <Tooltip title="Coming Soon..." arrow>
+                <Link color="inherit">Try the demo</Link>
+              </Tooltip>
+            </Grid>
+            <Grid item component={Typography} variant="h6">
+              <Link href="" color="inherit">
+                Get creative freedom
               </Link>
-            </Tooltip>
+            </Grid>
           </Grid>
-          <Grid item component={Typography} variant="h6">
-            <Link href="" color="inherit">
-              Get creative freedom
-            </Link>
-          </Grid>
-        </Grid>
+        </Hidden>
       </div>
     </div>
   );

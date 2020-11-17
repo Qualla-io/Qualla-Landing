@@ -7,9 +7,10 @@ import {
   Tooltip,
   Typography,
 } from "@material-ui/core";
-import { ReactComponent as SmartContractLogo } from "../images/SmartContract.svg";
-import useStyles from "./detailStyles";
+import { ReactComponent as SmartContractLogo } from "../../images/SmartContractPath.svg";
+import useStyles from "../detailStyles";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import CustomContainer from "../../containers/CustomContainer";
 
 const _useStyles = makeStyles((theme) => ({
   div: {
@@ -24,7 +25,7 @@ export default function ContractDetail() {
   const classes = useStyles();
   return (
     <div className={_classes.div}>
-      <Container>
+      <CustomContainer>
         <Grid
           container
           direction="row"
@@ -45,9 +46,9 @@ export default function ContractDetail() {
             </Typography>
             <div className={classes.button}>
               <Tooltip title="Coming soon..." arrow>
-                <Button variant="contained">
-                  <Typography variant="subtitle1" className={classes.buttonTxt}>
-                    <b>Learn more about Smart Contracts</b>
+                <Button variant="contained" color="secondary">
+                  <Typography variant="h6" className={classes.buttonTxt}>
+                    Learn more about Smart Contracts
                   </Typography>
                   <ArrowForwardIosIcon className={classes.buttonIcon} />
                 </Button>
@@ -58,7 +59,7 @@ export default function ContractDetail() {
             <SmartContractLogo className={classes.media} />
           </Grid>
         </Grid>
-      </Container>
+      </CustomContainer>
     </div>
   );
 }

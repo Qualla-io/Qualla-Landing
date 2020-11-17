@@ -13,10 +13,21 @@ import HowItWorks from "./containers/HowItWorks";
 import Details from "./containers/Details";
 import Timeline from "./components/Timeline";
 import Footer from "./containers/Footer";
+import { Hidden } from "@material-ui/core";
+import QuallaLogo from "./components/QuallaLogo";
 
 const font = "'Rubik', sans-serif";
 
 let theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#3e7cb1",
+    },
+    secondary: {
+      main: "#F16F55",
+      contrastText: "#FFF"
+    },
+  },
   typography: {
     fontFamily: font,
     button: {
@@ -48,10 +59,13 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className="App">
+        <QuallaLogo />
         <Header />
         <HowItWorks />
         <Details />
-        <Timeline />
+        <Hidden xsDown>
+          <Timeline />
+        </Hidden>
         <Footer />
       </div>
     </ThemeProvider>

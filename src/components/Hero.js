@@ -1,6 +1,7 @@
 import { Typography, makeStyles, Grid, Button } from "@material-ui/core";
-import ArrowForwardRoundedIcon from "@material-ui/icons/ArrowForwardRounded";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import React from "react";
+import CustomButton from "./CustomButton";
 
 const useStyles = makeStyles((theme) => ({
   headline: {
@@ -16,7 +17,11 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
   btnText: {
-    marginRight: theme.spacing(1),
+    marginRight: theme.spacing(2),
+  },
+  icon: {
+    flexGrow: 1,
+    direction: "row",
   },
 }));
 
@@ -43,12 +48,13 @@ export default function Hero() {
         Qualla puts the control directly into the hands of creators and those
         who support them.
       </Grid>
-      <Button variant="contained" className={classes.callBtn}>
-        <Typography variant="h5" className={classes.btnText}>
-          <b>Get Creative Freedom </b>
+      <Button variant="contained" color="secondary" className={classes.callBtn}>
+        <Typography variant="h4" className={classes.btnText} color="inherit">
+          Get Creative Freedom
         </Typography>{" "}
-        <ArrowForwardRoundedIcon />
+        <ArrowForwardIosIcon />
       </Button>
+      {/* <CustomButton /> */}
     </div>
   );
 }

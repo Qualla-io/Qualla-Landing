@@ -7,10 +7,11 @@ import {
   Typography,
 } from "@material-ui/core";
 import React from "react";
-import { ReactComponent as DaiLogo } from "../images/daiLogo.svg";
+import { ReactComponent as DaiLogo } from "../../images/daiLogo.svg";
 
-import useStyles from "./detailStyles";
+import useStyles from "../detailStyles";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import CustomContainer from "../../containers/CustomContainer";
 
 const _useStyles = makeStyles((theme) => ({
   div: {
@@ -25,7 +26,7 @@ export default function DaiDetail() {
   const _classes = _useStyles();
   return (
     <div className={_classes.div}>
-      <Container>
+      <CustomContainer>
         <Grid
           container
           direction="row"
@@ -46,9 +47,9 @@ export default function DaiDetail() {
             </Typography>
             <div className={classes.button}>
               <Tooltip title="Coming Soon..." arrow>
-                <Button variant="contained" disableRipple>
-                  <Typography variant="subtitle1" className={classes.buttonTxt}>
-                    <b>Learn more about Dai</b>
+                <Button variant="contained" color="secondary" disableRipple>
+                  <Typography variant="h6" className={classes.buttonTxt}>
+                   Learn more about Dai
                   </Typography>
                   <ArrowForwardIosIcon className={classes.buttonIcon} />
                 </Button>
@@ -59,7 +60,7 @@ export default function DaiDetail() {
             <DaiLogo className={classes.media} />
           </Grid>
         </Grid>
-      </Container>
+      </CustomContainer>
     </div>
   );
 }

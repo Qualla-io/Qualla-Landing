@@ -7,13 +7,14 @@ import {
   Tooltip,
   Typography,
 } from "@material-ui/core";
-import useStyles from "./detailStyles";
-import { ReactComponent as DaiLogo } from "../images/daiLogo.svg";
+import useStyles from "../detailStyles";
+import { ReactComponent as DaiLogo } from "../../images/daiLogo.svg";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import CustomContainer from "../../containers/CustomContainer";
 
 const _useStyles = makeStyles((theme) => ({
   div: {
-    backgroundColor: "#B0B0B0",
+    backgroundColor: "#C2FFF2",
     marginTop: theme.spacing(4),
     marginBottom: theme.spacing(4),
   },
@@ -24,7 +25,7 @@ export default function SubscriberDetail() {
   const _classes = _useStyles();
   return (
     <div className={_classes.div}>
-      <Container>
+      <CustomContainer>
         <Grid
           container
           direction="row"
@@ -50,17 +51,18 @@ export default function SubscriberDetail() {
             </Typography>
             <div className={classes.button}>
               <Tooltip title="Coming Soon..." arrow>
-                <Button variant="contained" disableRipple>
-                  <Typography variant="subtitle1" className={classes.buttonTxt}>
-                    <b>Try the demo!</b>
+                <Button variant="contained" color="secondary" disableRipple>
+                  <Typography variant="h6" className={classes.buttonTxt}>
+                    Try the demo!
                   </Typography>
-                  <ArrowForwardIosIcon className={classes.buttonIcon} />
+                  <ArrowForwardIosIcon
+                  />
                 </Button>
               </Tooltip>
             </div>
           </Grid>
         </Grid>
-      </Container>
+      </CustomContainer>
     </div>
   );
 }
