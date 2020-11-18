@@ -59,7 +59,7 @@ export default function DaiDetail() {
                   onClick={handleClick}
                 >
                   <Typography variant="h6" className={classes.buttonTxt}>
-                   Learn about Dai
+                    Learn about Dai
                   </Typography>
                   <ArrowForwardIosIcon className={classes.buttonIcon} />
                 </Button>

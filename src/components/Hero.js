@@ -1,14 +1,20 @@
 import { Typography, makeStyles, Grid, Button } from "@material-ui/core";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import React from "react";
+
+
 // import CustomButton from "./CustomButton";
 
 const useStyles = makeStyles((theme) => ({
+  heroRoot: {
+    
+  },
   headline: {
     marginTop: theme.spacing(8),
   },
   tagline: {
     marginTop: theme.spacing(2),
+    background: theme.palette.background.default
   },
   callBtn: {
     marginTop: theme.spacing(6),
@@ -28,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Hero() {
   const classes = useStyles();
   return (
-    <div>
+    <div className={classes.heroRoot}>
       <Grid
         component={Typography}
         item

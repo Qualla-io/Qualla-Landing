@@ -81,10 +81,9 @@ export default function CustomTimeline() {
       icon: <PeopleAltOutlinedIcon className={classes.icon} />,
       title: "Progressive Decentralization",
       description: ` 
-        As the platform matures, we plan to turn control over to the
-        community of creators and users who value it most. We want to make
-        our community into stakeholders who are rewarded for using the
-        platform and have a say in its future.`,
+        As the platform matures, we plan to incrementally turn control over to the
+        community of creators and users who value it most. We want to radically reward 
+        and include those who have an active stake in the future of the platform.`,
     },
   ];
 
@@ -94,7 +93,7 @@ export default function CustomTimeline() {
         <Typography className={classes.heading} variant="h3">
           Road map
         </Typography>
-        <Hidden xsDown>
+        <Hidden smDown>
           <Timeline align="alternate">
             {steps.map((step, i) => (
               <>
@@ -116,35 +115,33 @@ export default function CustomTimeline() {
             ))}
           </Timeline>
         </Hidden>
-        <Hidden smUp>
-          <Card className={classes.list}>
-            <List>
-              {steps.map((step, i) => (
-                <>
-                  <ListItem alignItems="flex-start" key={i}>
-                    <ListItemIcon>{step.icon}</ListItemIcon>
-                    <ListItemText
-                      primary={
-                        <Typography variant="h6">
-                          <b>
-                            {i + 1}. {step.title}{" "}
-                          </b>
-                        </Typography>
-                      }
-                      secondary={<Typography>{step.description}</Typography>}
-                    />
-                  </ListItem>
-                  {i < steps.length - 1 ? (
-                    <Divider
-                      variant="inset"
-                      component="li"
-                      classes={{ root: classes.divider }}
-                    />
-                  ) : null}
-                </>
-              ))}
-            </List>
-          </Card>
+        <Hidden mdUp>
+          <List className={classes.list}>
+            {steps.map((step, i) => (
+              <>
+                <ListItem alignItems="flex-start" key={i}>
+                  <ListItemIcon>{step.icon}</ListItemIcon>
+                  <ListItemText
+                    primary={
+                      <Typography variant="h6">
+                        <b>
+                          {i + 1}. {step.title}{" "}
+                        </b>
+                      </Typography>
+                    }
+                    secondary={<Typography>{step.description}</Typography>}
+                  />
+                </ListItem>
+                {i < steps.length - 1 ? (
+                  <Divider
+                    variant="inset"
+                    component="li"
+                    classes={{ root: classes.divider }}
+                  />
+                ) : null}
+              </>
+            ))}
+          </List>
         </Hidden>
       </CustomContainer>
     </div>

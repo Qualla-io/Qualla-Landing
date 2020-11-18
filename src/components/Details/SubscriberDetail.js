@@ -17,6 +17,8 @@ const _useStyles = makeStyles((theme) => ({
     background: `linear-gradient(225deg, #C2FFF2, #EBFFFB)`,
     marginTop: theme.spacing(4),
     marginBottom: theme.spacing(4),
+    borderTopRightRadius: 100,
+    borderBottomRightRadius: 100,
   },
 }));
 

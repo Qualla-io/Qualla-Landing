@@ -58,6 +58,7 @@ const useStyles = makeStyles((theme) => ({
     background: `linear-gradient(45deg, #C2FFF2, #EBFFFB)`,
     // backgroundColor: "#C2FFF2",
     alignContent: "center",
+    borderBottomLeftRadius: 100
   },
   steps: {
     height: "100%",

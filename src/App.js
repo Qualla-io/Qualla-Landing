@@ -12,7 +12,6 @@ import { SnackbarProvider } from "notistack";
 import Header from "./containers/Header";
 import HowItWorks from "./containers/HowItWorks";
 import Details from "./containers/Details";
-import Timeline from "./components/Timeline";
 import Footer from "./containers/Footer";
 import QuallaLogo from "./components/QuallaLogo";
 
@@ -72,7 +71,6 @@ function App() {
           <Header />
           <HowItWorks />
           <Details />
-          <Timeline />
           <Footer />
         </SnackbarProvider>
       </div>

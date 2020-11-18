@@ -10,10 +10,14 @@ const useStyles = makeStyles((theme) => ({
   topbar: {
     display: "flex",
     direction: "row",
+    margin: "auto",
+    width: "100%",
     marginTop: theme.spacing(6),
     justifyContent: "bottom",
   },
-  title: {},
+  title: {
+    marginLeft: 0
+  },
   grow: {
     display: "flex",
     direction: "row",
