@@ -7,7 +7,6 @@ import {
   ListItem,
   ListItemText,
   Divider,
-  Card,
   ListItemIcon,
 } from "@material-ui/core";
 import Timeline from "@material-ui/lab/Timeline";
@@ -23,7 +22,7 @@ import PaymentOutlinedIcon from "@material-ui/icons/PaymentOutlined";
 
 import { ReactComponent as PaintingIcon } from "../images/painting.svg";
 
-import React, { Fragment } from "react";
+import React from "react";
 import CustomContainer from "../containers/CustomContainer";
 
 const useStyles = makeStyles((theme) => ({
@@ -46,6 +45,9 @@ const useStyles = makeStyles((theme) => ({
     padding: 10,
     borderColor: theme.palette.secondary.main,
     borderWidth: 2,
+  },
+  timelineItem: {
+    paddingBottom: theme.spacing(4),
   },
   list: {
     padding: theme.spacing(1),
@@ -104,9 +106,11 @@ export default function CustomTimeline() {
                     </TimelineDot>
                     {i < steps.length - 1 ? <TimelineConnector /> : null}
                   </TimelineSeparator>
-                  <TimelineContent>
+                  <TimelineContent className={classes.timelineItem}>
                     <Paper elevation={3} className={classes.paper}>
-                      <Typography variant="h6">{step.title}</Typography>
+                      <Typography variant="h6">
+                        <b>{step.title}</b>
+                      </Typography>
                       <Typography>{step.description}</Typography>
                     </Paper>
                   </TimelineContent>
