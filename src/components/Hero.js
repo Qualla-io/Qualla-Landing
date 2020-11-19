@@ -1,20 +1,18 @@
 import { Typography, makeStyles, Grid, Button } from "@material-ui/core";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import React from "react";
-
+import { Link } from "react-router-dom";
 
 // import CustomButton from "./CustomButton";
 
 const useStyles = makeStyles((theme) => ({
-  heroRoot: {
-    
-  },
+  heroRoot: {},
   headline: {
     marginTop: theme.spacing(8),
   },
   tagline: {
     marginTop: theme.spacing(2),
-    background: theme.palette.background.default
+    background: theme.palette.background.default,
   },
   callBtn: {
     marginTop: theme.spacing(6),
@@ -54,7 +52,13 @@ export default function Hero() {
         Qualla puts the control directly into the hands of creators and those
         who support them.
       </Grid>
-      <Button variant="contained" color="secondary" className={classes.callBtn}>
+      <Button
+        variant="contained"
+        color="secondary"
+        className={classes.callBtn}
+        component={Link}
+        to={"/survey"}
+      >
         <Typography variant="h5" className={classes.btnText} color="inherit">
           Get Creative Freedom
         </Typography>{" "}

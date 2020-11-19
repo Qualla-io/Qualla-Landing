@@ -8,6 +8,7 @@ import {
   ListItemText,
   Divider,
   ListItemIcon,
+  Button,
 } from "@material-ui/core";
 import Timeline from "@material-ui/lab/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
@@ -15,7 +16,7 @@ import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
 import TimelineConnector from "@material-ui/lab/TimelineConnector";
 import TimelineContent from "@material-ui/lab/TimelineContent";
 import TimelineDot from "@material-ui/lab/TimelineDot";
-// import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
 import PeopleAltOutlinedIcon from "@material-ui/icons/PeopleAltOutlined";
 import PaymentOutlinedIcon from "@material-ui/icons/PaymentOutlined";
@@ -23,6 +24,7 @@ import PaymentOutlinedIcon from "@material-ui/icons/PaymentOutlined";
 import { ReactComponent as PaintingIcon } from "../images/painting.svg";
 
 import React from "react";
+import { Link } from "react-router-dom";
 import CustomContainer from "../containers/CustomContainer";
 
 const useStyles = makeStyles((theme) => ({
@@ -55,6 +57,19 @@ const useStyles = makeStyles((theme) => ({
   divider: {
     background: theme.palette.secondary.main,
   },
+  callBtn: {
+    marginTop: theme.spacing(4),
+    marginBottom: theme.spacing(4),
+    borderRadius: 15,
+    padding: theme.spacing(2),
+  },
+  btnText: {
+    marginRight: theme.spacing(2),
+  },
+  btnDiv: {
+    display: 'flex',
+    justifyContent: "center"
+  }
 }));
 
 export default function CustomTimeline() {
@@ -147,6 +162,24 @@ export default function CustomTimeline() {
             ))}
           </List>
         </Hidden>
+        <div className={classes.btnDiv}>
+          <Button
+            variant="contained"
+            color="secondary"
+            className={classes.callBtn}
+            component={Link}
+            to={"/survey"}
+          >
+            <Typography
+              variant="h5"
+              className={classes.btnText}
+              color="inherit"
+            >
+              Get Creative Freedom
+            </Typography>{" "}
+            <ArrowForwardIosIcon />
+          </Button>
+        </div>
       </CustomContainer>
     </div>
   );

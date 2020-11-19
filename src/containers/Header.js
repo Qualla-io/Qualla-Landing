@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundSize: "50% 60%",
     },
     [theme.breakpoints.up("sm")]: {
-      backgroundSize: "45% 77%",
+      backgroundSize: "45% 90%",
     },
   },
 }));
@@ -28,7 +28,7 @@ export default function Header() {
   return (
     <div className={classes.header}>
       <CustomContainer>
-        <Topbar />
+        {/* <Topbar /> */}
         <Hero />
       </CustomContainer>
     </div>

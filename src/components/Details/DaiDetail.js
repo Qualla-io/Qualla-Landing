@@ -47,7 +47,7 @@ export default function DaiDetail() {
               built on the Ethereum network and can be used by anyone in the
               world. Accept payments from anywhere without worring about
               exchange rates, high transaction fees, or volatility. Transactions
-              are settled instantly and securely.
+              are settled securely and nearly instantly.
             </Typography>
             <div className={classes.button}>
               <Tooltip title="Coming Soon..." arrow>

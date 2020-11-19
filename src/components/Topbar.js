@@ -2,11 +2,25 @@ import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Link, Tooltip, Hidden } from "@material-ui/core";
+import { Grid, Tooltip, Hidden } from "@material-ui/core";
 import { useSnackbar } from "notistack";
-// import CustomTooltip from "./Details/CustomTooltip";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
+  container: {
+    display: "flex",
+    direction: "column",
+    justify: "center",
+    alignItems: "center",
+    [theme.breakpoints.up("md")]: {
+      paddingRight: 146,
+      paddingLeft: 146,
+    },
+    [theme.breakpoints.down("sm")]: {
+      paddingRight: 50,
+      paddingLeft: 50,
+    },
+  },
   topbar: {
     display: "flex",
     direction: "row",
@@ -14,14 +28,27 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     marginTop: theme.spacing(6),
     justifyContent: "bottom",
+    [theme.breakpoints.up("lg")]: {
+      maxWidth: 1280,
+    },
+    [theme.breakpoints.only("md")]: {
+      maxWidth: 960,
+    },
+    [theme.breakpoints.only("xs")]: {
+      maxWidth: 600,
+    },
   },
   title: {
-    marginLeft: 0
+    marginLeft: 0,
+  },
+  center: {
+    display: "flex",
+    marginLeft: "auto",
   },
   grow: {
     display: "flex",
     direction: "row",
-    marginLeft: "auto",
+    marginRight: 0,
     verticalAlign: "text-bottom",
   },
   content: {
@@ -34,34 +61,58 @@ export default function Topbar() {
   const { enqueueSnackbar } = useSnackbar();
 
   const handleClick = () => {
-    enqueueSnackbar("Coming Soon...")
-  }
+    enqueueSnackbar("Coming Soon...");
+  };
 
   return (
-    <div className={classes.topbar}>
-      <Typography className={classes.title} variant="h4">
-        <b>Qualla</b>
-      </Typography>
-      <div className={classes.grow}>
-        <Hidden smDown>
-          <Grid
-            container
-            spacing={4}
-            className={classes.content}
-            alignItems="flex-end"
-          >
-            <Grid item component={Typography} variant="h6">
-              <Tooltip title="Coming Soon..." arrow>
-                <Link color="inherit" onClick={handleClick}>Try the demo</Link>
-              </Tooltip>
+    <div className={classes.container}>
+      <div className={classes.topbar}>
+        <Typography
+          component={Link}
+          to={"/"}
+          className={classes.title}
+          variant="h4"
+          color="inherit"
+          style={{ textDecoration: "none" }}
+        >
+          <b>Qualla</b>
+        </Typography>
+        <div className={classes.center}></div>
+        <div className={classes.grow}>
+          <Hidden smDown>
+            <Grid
+              container
+              spacing={4}
+              className={classes.content}
+              alignItems="flex-end"
+            >
+              <Grid item>
+                <Tooltip title="Coming Soon..." arrow>
+                  <Typography
+                    component={Link}
+                    variant="h6"
+                    color="inherit"
+                    onClick={handleClick}
+                    style={{ textDecoration: "none" }}
+                  >
+                    Try the demo
+                  </Typography>
+                </Tooltip>
+              </Grid>
+              <Grid item>
+                <Typography
+                  variant="h6"
+                  component={Link}
+                  to={"/survey"}
+                  color="inherit"
+                  style={{ textDecoration: "none" }}
+                >
+                  Get creative freedom
+                </Typography>
+              </Grid>
             </Grid>
-            <Grid item component={Typography} variant="h6">
-              <Link href="" color="inherit">
-                Get creative freedom
-              </Link>
-            </Grid>
-          </Grid>
-        </Hidden>
+          </Hidden>
+        </div>
       </div>
     </div>
   );

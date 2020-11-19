@@ -7,13 +7,15 @@ import {
 } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { SnackbarProvider } from "notistack";
-
+import { BrowserRouter as Router } from "react-router-dom";
+import BaseRouter from "./routes";
 //components
 import Header from "./containers/Header";
 import HowItWorks from "./containers/HowItWorks";
 import Details from "./containers/Details";
 import Footer from "./containers/Footer";
 import QuallaLogo from "./components/QuallaLogo";
+import Topbar from "./components/Topbar";
 
 const font = "'Rubik', sans-serif";
 
@@ -55,26 +57,26 @@ theme.typography.h1 = {
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <div className="App">
-        <SnackbarProvider
-          anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "center",
-          }}
-          variant="info"
-          autoHideDuration={2000}
-          // hideIconVariant
-        >
-          <QuallaLogo />
-          <Header />
-          <HowItWorks />
-          <Details />
-          <Footer />
-        </SnackbarProvider>
-      </div>
-    </ThemeProvider>
+    <div className="App">
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Router>
+          <SnackbarProvider
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "center",
+            }}
+            variant="info"
+            autoHideDuration={2000}
+            // hideIconVariant
+          >
+            <QuallaLogo />
+            <Topbar />
+            <BaseRouter />
+          </SnackbarProvider>
+        </Router>
+      </ThemeProvider>
+    </div>
   );
 }
 
