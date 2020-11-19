@@ -10,10 +10,6 @@ import { SnackbarProvider } from "notistack";
 import { BrowserRouter as Router } from "react-router-dom";
 import BaseRouter from "./routes";
 //components
-import Header from "./containers/Header";
-import HowItWorks from "./containers/HowItWorks";
-import Details from "./containers/Details";
-import Footer from "./containers/Footer";
 import QuallaLogo from "./components/QuallaLogo";
 import Topbar from "./components/Topbar";
 

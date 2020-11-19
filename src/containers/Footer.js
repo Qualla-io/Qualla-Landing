@@ -1,8 +1,7 @@
-import { makeStyles, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import React from "react";
 import FooterGrid from "../components/FooterGrid";
 import CustomTimeline from "../components/Timeline";
-import CustomContainer from "./CustomContainer";
 
 const useStyles = makeStyles((theme) => ({
   footerDiv: {

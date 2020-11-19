@@ -2,7 +2,6 @@ import { makeStyles } from "@material-ui/core";
 import React from "react";
 
 import { ReactTypeformEmbed } from "react-typeform-embed";
-import Topbar from "../components/Topbar";
 
 const useStyles = makeStyles((theme) => ({
   root: {
