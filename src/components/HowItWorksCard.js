@@ -1,32 +1,31 @@
-import {
-  Typography,
-  Card,
-  makeStyles,
-  CardContent,
-} from "@material-ui/core";
+import { Typography, Card, makeStyles, CardContent } from "@material-ui/core";
 import React from "react";
 
 const useStyles = makeStyles((theme) => ({
+  title: {
+    marginTop: theme.spacing(4),
+    textAlign: "center",
+  },
   content: {
     marginTop: theme.spacing(4),
   },
   number: {
-    marginTop: theme.spacing(4),
-    zIndex: 1,
-    boxSizing: "border-box",
-    // "&::before": {
-    //   content: '""',
-    //   zIndex: 0,
-    //   boxSizing: "inherit",
-    //   position: "absolute",
-    //   top: 0,
-    //   left: 0,
-    //   right: 0,
-    //   bottom: 0,
-    //   borderRadius: "100%",
-    //   background: "#2070ff",
-    //   opacity: 0.1,
-    // },
+    height: 75,
+    width: 75,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: "50%",
+    background: `linear-gradient(-45deg, #C2FFF2, #EBFFFB)`,
+  },
+  topDiv: {
+    display: "flex",
+    direction: "row",
+    paddingTop: theme.spacing(4),
+    justifyContent: "center",
+  },
+  grow: {
+    margin: "auto",
   },
   card: {
     display: "flex",
@@ -40,14 +39,17 @@ export default function HowItWorksCard(props) {
   const classes = useStyles();
   const step = props.step;
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} raised>
       <CardContent>
-        <Typography className={classes.number} variant="h2">
-          {step.num}
-        </Typography>
-        <Typography className={classes.content} variant="h4">
+        <div className={classes.topDiv}>
+          <Typography variant="h2" className={classes.number}>
+            {step.num}
+          </Typography>
+        </div>
+        <Typography className={classes.title} variant="h4">
           <b>{step.title}</b>
         </Typography>
+
         <Typography className={classes.content}>{step.description}</Typography>
       </CardContent>
     </Card>

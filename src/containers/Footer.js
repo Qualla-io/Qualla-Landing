@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   },
   footer: {
     backgroundColor: theme.palette.primary.main,
-    height: "200px",
+    paddingBottom: theme.spacing(8),
     borderTopLeftRadius: 100,
     borderTopRightRadius: 100,
     // width: "98vw",

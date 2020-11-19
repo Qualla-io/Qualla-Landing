@@ -43,11 +43,12 @@ export default function DaiDetail() {
             </Typography>
             <Typography className={classes.paragraph}>
               All of the subscriptions on Qualla are paid in Dai, a completely
-              decentralized, stable crytocurrency pegged to the USD. Dai is
+              decentralized, stable cryptocurrency pegged to the USD. Dai is
               built on the Ethereum network and can be used by anyone in the
-              world. Accept payments from anywhere without worring about
+              world. Accept payments from anywhere without worrying about
               exchange rates, high transaction fees, or volatility. Transactions
-              are settled securely and nearly instantly.
+              are settled securely and nearly instantly. Support for other
+              tokens may be added in the future.
             </Typography>
             <div className={classes.button}>
               <Tooltip title="Coming Soon..." arrow>

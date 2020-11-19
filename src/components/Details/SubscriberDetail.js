@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import useStyles from "../detailStyles";
-import { ReactComponent as DaiLogo } from "../../images/daiLogo.svg";
+import { ReactComponent as DaiLogo } from "../../images/complex.svg";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import CustomContainer from "../../containers/CustomContainer";
 import { useSnackbar } from "notistack";
@@ -47,14 +47,13 @@ export default function SubscriberDetail() {
               <b>Crypto made easy</b>
             </Typography>
             <Typography className={classes.paragraph}>
-              Decentralized applications have historically been complex and hard
-              to use. Qualla puts the user experience in the front row seat. All
-              you need to get started is an Ethereum wallet to sign
-              transactions. You can get one for free by downloading the popular
-              browser extension Metamask, or by connecting an exsisting wallet.
-              We handle all the complexities of transactions so you don't have
-              to. Just sign a message for each action you take to prove its you.
-              Safe, simple, secure!
+              Let use help you plant the seeds of your freedom. Decentralized
+              applications have historically been complex and hard to use.
+              Qualla puts the user experience in the front row seat. We make it
+              easy for you to set up your contract, onboard users, and interact
+              with your community. Our goal is to provide you with all the
+              benefits that decentralization has to offer, while removing as
+              much of the complexity as possible.
             </Typography>
             <div className={classes.button}>
               <Tooltip title="Coming Soon..." arrow>

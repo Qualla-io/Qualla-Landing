@@ -42,7 +42,7 @@ export default function ContractDetail() {
               <b>Unstoppable creativity</b>
             </Typography>
             <Typography className={classes.paragraph}>
-              When you create a subscrition through Qualla, we launch an
+              When you create a subscription  through Qualla, we launch an
               Ethereum smart contract on your behalf. No one can destroy or
               modify this contract without your approval, not even us! You
               control the rules and your subscribers pay directly to your

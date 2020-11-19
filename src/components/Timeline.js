@@ -67,9 +67,9 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   btnDiv: {
-    display: 'flex',
-    justifyContent: "center"
-  }
+    display: "flex",
+    justifyContent: "center",
+  },
 }));
 
 export default function CustomTimeline() {
@@ -86,10 +86,10 @@ export default function CustomTimeline() {
     },
     {
       icon: <PaintingIcon className={classes.icon} />,
-      title: "Exclusive Digitial Goods",
+      title: "Exclusive Digital Goods",
       description: ` 
         Create exclusive digital goods that your users can own, collect,
-        and trade as non-fungable tokens (NFTs). Offer them as
+        and trade as non-fungible tokens (NFTs). Offer them as
         subscription perks or one time purchases. Think art, music, and
         more. Any digital asset can be made into a limited NFT that your
         followers will value.`,

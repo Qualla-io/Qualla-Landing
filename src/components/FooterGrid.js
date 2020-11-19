@@ -43,10 +43,13 @@ export default function FooterGrid() {
   return (
     <div className={classes.container}>
       <Grid container className={classes.footer}>
-        <Grid item container>
-          <Typography variant="h4" className={classes.title}>
-            Qualla
-          </Typography>
+        <Grid item container spacing={2} direction="column">
+          <Grid item component={Typography} variant="h5" className={classes.title}>
+            Contact
+          </Grid>
+          <Grid item component={Typography} variant="subtitle1" className={classes.title}>
+            info@qualla.io
+          </Grid>
         </Grid>
       </Grid>
     </div>
